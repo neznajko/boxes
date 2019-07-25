@@ -64,7 +64,7 @@ def ckmate(box): # >LL>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> check mate
 log = [] # | | | | | | | | | | | History stack with box string positions
 #  +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
 def nextnode(node):
-    """ We find next node by executing order 66"""
+    """ We find next node by executing order 66 """
     poz = node.poz
     dest = poz.dest
     box = poz.box
