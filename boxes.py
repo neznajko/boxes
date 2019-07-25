@@ -22,7 +22,7 @@ def svap(orig, dest, box): # :::::::::::::::::::::::::::::::::::::::::::
     y = slice(orig, orig + 2)
     z = slice(dest, dest + 2)
     t[y], t[z] = t[z], t[y]
-    return(''.join(t))
+    return ''.join(t)
 
 class Poz: # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Position Class
     def __init__(self, box): ###__########################## constructor
@@ -76,7 +76,7 @@ def nextnode(node):
             break
         box = svap(orig, dest, box)
         if (box not in log):
-            return(Node(box))
+            return Node(box)
         box = svap(dest, orig, box)
 
 preorder = None #               the solution with lowest level from srch
@@ -120,9 +120,9 @@ class Node: # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Node Class
         self.parent = None #|||||||||||||||||||||||||||||||| parent node
 
     def __str__(self): # ///////////////////////////////////////////////
-        return(self.poz.__str__() + \
+        return self.poz.__str__() + \
                f"\ni = {self.i}\nlevel = {self.level}" + \
-               f"\nparent = {self.parent.__repr__()}")
+               f"\nparent = {self.parent.__repr__()}"
 
     def __lt__(self, other): # =============================== less than
         return self.level < other.level
